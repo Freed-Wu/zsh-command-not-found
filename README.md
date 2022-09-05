@@ -25,10 +25,13 @@ It works out of the box with the command-not-found packages for:
 - [Ubuntu](https://www.porcheron.info/command-not-found-for-zsh/)
 - [Debian](https://packages.debian.org/search?keywords=command-not-found)
 - [Arch Linux](https://wiki.archlinux.org/index.php/Pkgfile#Command_not_found)
-- [macOS (Homebrew)](https://github.com/Homebrew/homebrew-command-not-found)
 - [Fedora](https://fedoraproject.org/wiki/Features/PackageKitCommandNotFound)
 - [NixOS](https://github.com/NixOS/nixpkgs/tree/master/nixos/modules/programs/command-not-found)
 - [Termux](https://github.com/termux/command-not-found)
 - [SUSE](https://www.unix.com/man-page/suse/1/command-not-found/)
+
+And
+
+- [Homebrew](https://github.com/Homebrew/homebrew-command-not-found)
 
 You can add support for other platforms by submitting a Pull Request.

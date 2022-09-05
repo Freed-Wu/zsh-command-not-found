@@ -1,11 +1,15 @@
 ## Platforms with a built-in command-not-found handler init file
 
+handler=Library/Taps/homebrew/homebrew-command-not-found/handler.sh
 for file (
   # Arch Linux. Must have pkgfile installed: https://wiki.archlinux.org/index.php/Pkgfile#Command_not_found
   /usr/share/doc/pkgfile/command-not-found.zsh
-  # macOS (M1 and classic Homebrew): https://github.com/Homebrew/homebrew-command-not-found
-  /opt/homebrew/Library/Taps/homebrew/homebrew-command-not-found/handler.sh
-  /usr/local/Homebrew/Library/Taps/homebrew/homebrew-command-not-found/handler.sh
+  # Linux (Homebrew): https://github.com/Homebrew/homebrew-command-not-found
+  /home/linuxbrew/.linuxbrew/Homebrew/$handler
+  # macOS (classic Homebrew):
+  /usr/local/Homebrew/$handler
+  # macOS (M1 Homebrew):
+  /opt/homebrew/$handler
 ); do
   if [[ -r "$file" ]]; then
     source "$file"
@@ -13,7 +17,7 @@ for file (
     return 0
   fi
 done
-unset file
+unset file handler
 
 
 ## Platforms with manual command_not_found_handler() setup
